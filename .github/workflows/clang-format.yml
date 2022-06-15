@@ -20,4 +20,4 @@ jobs:
     - name: install clang-format
       run: sudo apt-get install -y clang-format
     - name: run clang-format script
-      run: scripts/format_script.sh
+      run: scripts/clang-format.sh
