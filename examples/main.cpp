@@ -5,6 +5,10 @@ int getRandomNumber() {
               // guaranteed to be random.
 }
 
+int unformatted(){
+    return 0;
+}
+
 int main() {
   auto rnd = getRandomNumber();
   std::cout << rnd << std::endl;
