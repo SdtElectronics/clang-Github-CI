@@ -15,7 +15,7 @@ echo "Running clang-tidy against branch $TRAVIS_BRANCH, with hash $BASE_COMMIT"
 wget https://raw.githubusercontent.com/llvm-mirror/clang-tools-extra/release_50/clang-tidy/tool/clang-tidy-diff.py
 
 RESULT_OUTPUT="$(git diff -U0 $BASE_COMMIT | python clang-tidy-diff.py -p1 -clang-tidy-binary $(which clang-tidy) \
-                 -checks=$CLANG_TIDY_CHECKS)"
+                 -warnings-as-errors=$CLANG_TIDY_CHECKS)"
 if [[ $? -eq 0 ]]; then
   echo "$TOOL passed."
   exit 0
