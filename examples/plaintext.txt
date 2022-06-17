@@ -1,0 +1,1 @@
+This is a plaintext file containing no source code. Code analysis should not cover this file.
